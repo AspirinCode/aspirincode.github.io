@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Drug Design &amp; Drug Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Fight Disease With Code ! Fight Disease With DT !">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Drug Design &amp; Drug Discovery">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Drug Design &amp; Drug Discovery">
+<meta property="og:description" content="Fight Disease With Code ! Fight Disease With DT !">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Drug Design &amp; Drug Discovery">
+<meta name="twitter:description" content="Fight Disease With Code ! Fight Disease With DT !">
+  
+    <link rel="alternate" href="/atom.xml" title="Drug Design &amp; Drug Discovery" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/Resource">资源</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Drug Design &amp; Drug Discovery</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-RDkit-python2-rmsd" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/20/RDkit-python2-rmsd/" class="article-date">
+  <time datetime="2017-11-19T21:20:00.000Z" itemprop="datePublished">2017-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RDKit/">RDKit</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/20/RDkit-python2-rmsd/">RDKit：计算不同分子或构象之间的RMSD</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、RDKit简介"><a href="#一、RDKit简介" class="headerlink" title="一、RDKit简介"></a><strong>一、RDKit简介</strong></h2><p>RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。<br>RDKit官网<a href="http://www.rdkit.org/" target="_blank" rel="external">http://www.rdkit.org/</a><br>RDKit的编译安装及Python（2.7）绑定见博文：<a href="http://www.aspirincode.com/2017/11/01/Linux-RDkit-%20install-update/" target="_blank" rel="external">http://www.aspirincode.com/2017/11/01/Linux-RDkit-%20install-update/</a><br>RMSD计算参考网站：<a href="http://www.rdkit.org/docs/Cookbook.html#rmsd-calculation-between-n-molecules" target="_blank" rel="external">http://www.rdkit.org/docs/Cookbook.html#rmsd-calculation-between-n-molecules</a></p>
+<h2 id="二、RMSD-RDKit"><a href="#二、RMSD-RDKit" class="headerlink" title="二、RMSD-RDKit"></a><strong>二、RMSD-RDKit</strong></h2><p>RMSD，Root Mean Square Deviation；给定一个分子结构的两种或者多种状态，<br>对结构中所有的粒子的偏移量求平方和再平均，开方，就是RMSD。</p>
+<p>对于docking而言，如果有reference ligand（结合配体），计算对接配体的构象与结合配体之间的RMSD值，<br>对于判断docking准确性很重要。下面提供一个RDKit计算不同构象之间RMSD值的Python脚本。</p>
+<p><img src="/images/rdkit/rdkit.jpg" alt="RDKit-cd"><br></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/11/20/RDkit-python2-rmsd/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/20/RDkit-python2-rmsd/" data-id="cja763trr000zygldadyzybwq" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python2/">Python2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDKit/">RDKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RMSD/">RMSD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-RDkit-python2-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/19/RDkit-python2-3/" class="article-date">
+  <time datetime="2017-11-19T15:20:00.000Z" itemprop="datePublished">2017-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RDKit/">RDKit</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/19/RDkit-python2-3/">RDKit toolkit实战三:Generating Similarity Maps Using Fingerprints</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、RDKit简介"><a href="#一、RDKit简介" class="headerlink" title="一、RDKit简介"></a><strong>一、RDKit简介</strong></h2><p>RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。<br>RDKit官网<a href="http://www.rdkit.org/" target="_blank" rel="external">http://www.rdkit.org/</a><br>RDKit的编译安装及Python（2.7）绑定见博文：<br>RDKit iPython Notebook参考网站：<a href="https://nbviewer.jupyter.org/gist/madgpap/7673276" target="_blank" rel="external">https://nbviewer.jupyter.org/gist/madgpap/7673276</a><br>参考网站：<a href="http://www.rdkit.org/docs/GettingStartedInPython.html#generating-similarity-maps-using-fingerprints" target="_blank" rel="external">http://www.rdkit.org/docs/GettingStartedInPython.html#generating-similarity-maps-using-fingerprints</a><br><img src="http://img.blog.csdn.net/20171119231517275" alt="RDKit-cd"><br></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/11/19/RDkit-python2-3/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/19/RDkit-python2-3/" data-id="cja763tro000xygld3anu9bsw" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python2/">Python2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDKit/">RDKit</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-RDkit-python2-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/01/RDkit-python2-2/" class="article-date">
+  <time datetime="2017-11-01T14:00:00.000Z" itemprop="datePublished">2017-11-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RDKit/">RDKit</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/01/RDkit-python2-2/">RDKit toolkit实战二:Generating Similarity Maps Using Fingerprints</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、RDKit简介"><a href="#一、RDKit简介" class="headerlink" title="一、RDKit简介"></a><strong>一、RDKit简介</strong></h2><p>RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。<br>RDKit官网<a href="http://www.rdkit.org/" target="_blank" rel="external">http://www.rdkit.org/</a><br>RDKit的编译安装及Python（2.7）绑定见博文：<br>RDKit iPython Notebook参考网站：<a href="https://nbviewer.jupyter.org/gist/madgpap/7673276" target="_blank" rel="external">https://nbviewer.jupyter.org/gist/madgpap/7673276</a><br>参考网站：<a href="http://www.rdkit.org/docs/GettingStartedInPython.html#generating-similarity-maps-using-fingerprints" target="_blank" rel="external">http://www.rdkit.org/docs/GettingStartedInPython.html#generating-similarity-maps-using-fingerprints</a><br><img src="/images/rdkit/rdkit.jpg" alt="RDKit"><br></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/11/01/RDkit-python2-2/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/01/RDkit-python2-2/" data-id="cja763trk000vygldwagxej7r" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python2/">Python2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDKit/">RDKit</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Linux-RDkit- install-update" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/01/Linux-RDkit- install-update/" class="article-date">
+  <time datetime="2017-11-01T04:00:00.000Z" itemprop="datePublished">2017-11-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RDKit/">RDKit</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/01/Linux-RDkit- install-update/">Linux（CentOS 7_x64位）系统下安装RDkit(修正)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、RDKit简介"><a href="#一、RDKit简介" class="headerlink" title="一、RDKit简介"></a><strong>一、RDKit简介</strong></h2><p>RDKit is a collection of cheminformatics and machine-learning software written in C++ and Python.<br>RDKit官网：<a href="http://www.rdkit.org/" target="_blank" rel="external">http://www.rdkit.org/</a><br>前面写的一篇CentOS 7下安装RDkit的文章，在测试的时候有很多报错，且不支持InChI和Avalon toolkit，<br>后面使用中经常会报错。现在更新一下新的测试全通过的安装方法。</p>
+<p><img src="/images/rdkit/rdkit.jpg" alt="RDKit"><br></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/11/01/Linux-RDkit- install-update/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/01/Linux-RDkit- install-update/" data-id="cja763tqy000bygldf7do19mi" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDKit/">RDKit</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Virtual Screening" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/29/Virtual Screening/" class="article-date">
+  <time datetime="2017-10-29T15:30:00.000Z" itemprop="datePublished">2017-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Virtual-Screening/">Virtual Screening</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/29/Virtual Screening/">虚拟筛选涉及的小分子数据库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>药物设计和虚拟筛选依赖化学信息学和生物信息学中大量的靶点、小分子以及靶点-小分子相互作用星系。<br>从大量的有机化合物中有效地遴选出可能有候选化合物，避免了对化合物盲目地活性筛选，从而降低了发<br>现活性先导化合物的人力、时间和财力成本。本文简单介绍一些药物设计和虚拟筛选设计的分子库。</p>
+<p><img src="http://img.blog.csdn.net/20170827143139076" alt="Virtual Screening"><br></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/29/Virtual Screening/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/29/Virtual Screening/" data-id="cja763trw0012ygldt0eioq9e" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Drug-Design/">Drug Design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Virtual-Screening/">Virtual Screening</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-gmx-parb" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/29/gmx-parb/" class="article-date">
+  <time datetime="2017-10-29T15:30:00.000Z" itemprop="datePublished">2017-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/GROMACS/">GROMACS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/29/gmx-parb/">GROMACS运行参数整理（二）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="GROMACS运行参数整理（一）"><a href="#GROMACS运行参数整理（一）" class="headerlink" title="GROMACS运行参数整理（一）"></a>GROMACS运行参数整理（一）</h2><p><a href="http://www.aspirincode.com/2017/10/24/gmx-para/" target="_blank" rel="external">http://www.aspirincode.com/2017/10/24/gmx-para/</a><br><a href="http://blog.csdn.net/u012325865/article/details/78324899" target="_blank" rel="external">http://blog.csdn.net/u012325865/article/details/78324899</a></p>
+<h2 id="GROMACS运行参数整理（二）"><a href="#GROMACS运行参数整理（二）" class="headerlink" title="GROMACS运行参数整理（二）"></a>GROMACS运行参数整理（二）</h2><h3 id="Gromacs运行参数中文注释"><a href="#Gromacs运行参数中文注释" class="headerlink" title="Gromacs运行参数中文注释"></a><strong>Gromacs运行参数中文注释</strong></h3><p>中文注释仅供参考<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">9.Temperature coupling</div><div class="line"></div><div class="line">tcoupl =  ; 指定耦合方法</div><div class="line">         no ;不使用</div><div class="line">		 berendsen</div><div class="line">		 nose-hoover</div><div class="line">		 v-rescale</div><div class="line">nsttcouple =  ; 热耦合频率，默认1，表示与nstlist一致</div><div class="line">tc_grps =  ; 热耦合组</div><div class="line">tau_t =  ; 热耦合时间常数， ps, -1, 表示不耦合，个数对应组</div><div class="line">ref_t =  ; 参考温度---恒温值，个数对应组</div></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/29/gmx-parb/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/29/gmx-parb/" data-id="cja763tsk001tygld18n0w3jv" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GROMACS/">GROMACS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-gmx-para" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/24/gmx-para/" class="article-date">
+  <time datetime="2017-10-24T04:00:00.000Z" itemprop="datePublished">2017-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/GROMACS/">GROMACS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/24/gmx-para/">GROMACS运行参数整理（一）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Gromacs运行参数中文注释"><a href="#Gromacs运行参数中文注释" class="headerlink" title="Gromacs运行参数中文注释"></a><strong>Gromacs运行参数中文注释</strong></h2><p>中文注释仅供参考<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">1.Preprocessing</div><div class="line"></div><div class="line">include = ... ; 指定拓扑结构目录</div><div class="line">define = ...  ; 预处理控制拓扑文件</div><div class="line"></div><div class="line">         -DPOSRES ; 位置限制</div><div class="line">		 -DFLEXIBLE ; 柔性水代替刚性水</div><div class="line">		 </div><div class="line">2.Run control</div><div class="line">integrator =   ; 指定积分算法</div><div class="line">             md ; 蛙跳牛顿积分算法，用于平衡动力学积分</div><div class="line">			 steep ; 最陡下降法，用于能量最小化</div><div class="line">			 cg ; 共轭梯度法;用于能量最小化（需要双精度，且需先做steep）</div><div class="line"></div><div class="line">tinit = ; 模拟开始时刻（仅用于md,sd,bd)</div><div class="line"></div><div class="line">dt = ; 积分步长（仅用于md,sd,bd)</div><div class="line"></div><div class="line">nsteps = ;积分或能量最小化步数（-1为无穷大）</div><div class="line"></div><div class="line">init_step = ; 起始步</div><div class="line"></div><div class="line">comm_mode =   ; 质心运动控制</div><div class="line">            Linear ; 限制质心平移</div><div class="line">			Angular  ; 限制质心平移及绕心运动</div><div class="line">			No ; 无限制</div><div class="line"></div><div class="line">nstcomm =   ; 质心移动频率</div><div class="line"></div><div class="line">com_grps =   ;组质心设定，默认整个体系</div></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/24/gmx-para/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/24/gmx-para/" data-id="cja763tsg001oygldjrcuxoqg" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GROMACS/">GROMACS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Pymol-Linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/24/Pymol-Linux/" class="article-date">
+  <time datetime="2017-10-23T19:15:00.000Z" itemprop="datePublished">2017-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Pymol/">Pymol</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/24/Pymol-Linux/">Linux（CentOS7_64位）系统下安装Pymol（1.8.6）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、Pymol简介"><a href="#一、Pymol简介" class="headerlink" title="一、Pymol简介"></a><strong>一、Pymol简介</strong></h1><p>PyMOL适用于创作高品质的小分子或是生物大分子（特别是蛋白质）的三维结构图像。<br>软件的作者宣称，在所有正式发表的科学文献中的蛋白质结构图像中，有四分之一是使用PyMOL来制作。<br>PyMOL是少数可以用在结构生物学领域的开放源代码视觉化工具。软件以Py+MOL命名：“Py”表示它是由<br>一种计算机语言Python所衍生出来的，“MOL”表示它是用于显示分子（英文为molecule）结构的软件。</p>
+<p>PyMOL的学习网站：<a href="http://www.pymolwiki.org/index.php/Main_Page" target="_blank" rel="external">http://www.pymolwiki.org/index.php/Main_Page</a></p>
+<h1 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a><strong>硬件环境</strong></h1><p><img src="http://img.blog.csdn.net/20170617181901579" alt="硬件环境"></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/24/Pymol-Linux/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/24/Pymol-Linux/" data-id="cja763trc000kygld3531kxzq" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pymol/">Pymol</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Xmgrace-Linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/21/Xmgrace-Linux/" class="article-date">
+  <time datetime="2017-10-21T10:00:00.000Z" itemprop="datePublished">2017-10-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Xmgrace/">Xmgrace</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/21/Xmgrace-Linux/">Linux（CentOS 7_x64位）系统下安装Xmgrace</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、Xmgrace简介"><a href="#一、Xmgrace简介" class="headerlink" title="一、Xmgrace简介"></a><strong>一、Xmgrace简介</strong></h1><p>Xmgrace是Linux下类似origin的免费开源画图软件。<br>对于用惯Linux的人, 在Linux下画图方便许多，尤其处理gromacs动力学数据绘图。<br>Xmgrace官网: <a href="http://plasma-gate.weizmann.ac.il/Grace/" target="_blank" rel="external">http://plasma-gate.weizmann.ac.il/Grace/</a><br>Xmgrace安装包下载：ftp://plasma-gate.weizmann.ac.il/pub/grace/src/grace5/<br><img src="http://img.blog.csdn.net/20171021174925811" alt="grace"><br></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/21/Xmgrace-Linux/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/21/Xmgrace-Linux/" data-id="cja763trx0013ygld5wal718y" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xmgrace/">Xmgrace</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Linux-acpype" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/19/Linux-acpype/" class="article-date">
+  <time datetime="2017-10-19T14:55:30.000Z" itemprop="datePublished">2017-10-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ACPYPE/">ACPYPE</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/19/Linux-acpype/">Linux（CentOS 7_x64）系统下安装ACPYPE</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p><strong>ACPYPE</strong></p>
+<p>ACPYPE，基于Python的工具，使用Antechamber生成化学化合物的拓扑，并提供python与其他应用程序的接口。<br>将AMBER力场文件转换为GROMACS的拓扑文件。</p>
+<p><strong>acpype安装包下载</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svn checkout http://ccpn.svn.sourceforge.net/svnroot/ccpn/branches/stable/ccpn/python/acpype acpype</div></pre></td></tr></table></figure></p>
+<p><strong>acpype安装</strong><br>复制acpype文件夹至amber安装文件夹下；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">su root  </div><div class="line">cd acpype  </div><div class="line">ln -s $PWD/acpype.py /usr/local/bin/acpype</div></pre></td></tr></table></figure></p>
+<p><strong>运行acpype</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">acpype</div></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20170910235524928" alt="acpype"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/19/Linux-acpype/" data-id="cja763tr0000eygld19j5b5yo" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACPYPE/">ACPYPE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页&raquo;</a>
+  </nav>
+</section>
+           
+    <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+     
+        <h3 class="follow-title ">Fight Disease With Code ! Fight Disease With DT !</h3>
+     
+    <div class="widget follow">
+      
+              <a class="github" aria-hidden="true" href="https://github.com/AspirinCode" target="_blank" title="Github"></a>
+      
+      
+            <a class="weibo" aria-hidden="true"  href="http://blog.csdn.net/u012325865" target="_blank" title="微博"></a>
+      
+      
+      
+            <a class="email" aria-hidden="true"  href="mailto:2648008726@qq.com" target="_blank" title="邮箱"></a>
+      
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/20/RDkit-python2-rmsd/">RDKit：计算不同分子或构象之间的RMSD</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/19/RDkit-python2-3/">RDKit toolkit实战三:Generating Similarity Maps Using Fingerprints</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/01/RDkit-python2-2/">RDKit toolkit实战二:Generating Similarity Maps Using Fingerprints</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/01/Linux-RDkit- install-update/">Linux（CentOS 7_x64位）系统下安装RDkit(修正)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/29/Virtual Screening/">虚拟筛选涉及的小分子数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title categories">分类</h3>
+    <div class="widget" id="categories">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ACPYPE/">ACPYPE</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Amber/">Amber</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CUDA/">CUDA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chimera/">Chimera</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DOCK/">DOCK</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GROMACS/">GROMACS</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OpenBabel/">OpenBabel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pymol/">Pymol</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/RDKit/">RDKit</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Virtual-Screening/">Virtual Screening</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Xmgrace/">Xmgrace</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title tags">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACPYPE/">ACPYPE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amber16/">Amber16</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AmberTools16/">AmberTools16</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CUDA/">CUDA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/">CentOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chimera/">Chimera</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOCK/">DOCK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOCK6/">DOCK6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Drug-Design/">Drug Design</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GROMACS/">GROMACS</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NVIDIA/">NVIDIA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenBabel/">OpenBabel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pymol/">Pymol</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python2/">Python2</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RDKit/">RDKit</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RMSD/">RMSD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Virtual-Screening/">Virtual Screening</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xmgrace/">Xmgrace</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title tagcloud">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ACPYPE/" style="font-size: 14px; color: #00f">ACPYPE</a> <a href="/tags/Amber16/" style="font-size: 14px; color: #00f">Amber16</a> <a href="/tags/AmberTools16/" style="font-size: 14px; color: #00f">AmberTools16</a> <a href="/tags/CUDA/" style="font-size: 14px; color: #00f">CUDA</a> <a href="/tags/CentOS/" style="font-size: 14px; color: #00f">CentOS</a> <a href="/tags/Chimera/" style="font-size: 14px; color: #00f">Chimera</a> <a href="/tags/DOCK/" style="font-size: 14px; color: #00f">DOCK</a> <a href="/tags/DOCK6/" style="font-size: 14px; color: #00f">DOCK6</a> <a href="/tags/Drug-Design/" style="font-size: 14px; color: #00f">Drug Design</a> <a href="/tags/GROMACS/" style="font-size: 22.8px; color: #be68f1">GROMACS</a> <a href="/tags/Linux/" style="font-size: 25px; color: #ee82ee">Linux</a> <a href="/tags/NVIDIA/" style="font-size: 14px; color: #00f">NVIDIA</a> <a href="/tags/OpenBabel/" style="font-size: 14px; color: #00f">OpenBabel</a> <a href="/tags/Pymol/" style="font-size: 16.2px; color: #301afc">Pymol</a> <a href="/tags/Python/" style="font-size: 16.2px; color: #301afc">Python</a> <a href="/tags/Python2/" style="font-size: 18.4px; color: #5f34f8">Python2</a> <a href="/tags/RDKit/" style="font-size: 20.6px; color: #8f4ef5">RDKit</a> <a href="/tags/RMSD/" style="font-size: 14px; color: #00f">RMSD</a> <a href="/tags/Virtual-Screening/" style="font-size: 14px; color: #00f">Virtual Screening</a> <a href="/tags/Xmgrace/" style="font-size: 14px; color: #00f">Xmgrace</a>
+    </div>
+  </div>
+
+  
+    
+  
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+        <ul>
+            
+            <li>
+                <a href="http://blog.csdn.net/u012325865?viewmode=contents">AspirinCode&#39;s blog</a>
+            </li>
+            
+            <li>
+                <a href="https://zzuyubin.weebly.com/">zzuyubin</a>
+            </li>
+            
+            <li>
+                <a href="http://kangsgo.com/">kangsgo&#39;s blog</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 AspirinCode&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2648008726@qq.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/Resource" class="mobile-nav-link">资源</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+
+
+
+
+ <script  type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Linux（CentOS7_64位）系统下安装Pymol（1.8.6） | Drug Design &amp; Drug Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、Pymol简介PyMOL适用于创作高品质的小分子或是生物大分子（特别是蛋白质）的三维结构图像。软件的作者宣称，在所有正式发表的科学文献中的蛋白质结构图像中，有四分之一是使用PyMOL来制作。PyMOL是少数可以用在结构生物学领域的开放源代码视觉化工具。软件以Py+MOL命名：“Py”表示它是由一种计算机语言Python所衍生出来的，“MOL”表示它是用于显示分子（英文为molecule）结构的">
+<meta name="keywords" content="Linux,Pymol,CentOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux（CentOS7_64位）系统下安装Pymol（1.8.6）">
+<meta property="og:url" content="http://yoursite.com/2017/10/24/Pymol-Linux/index.html">
+<meta property="og:site_name" content="Drug Design &amp; Drug Discovery">
+<meta property="og:description" content="一、Pymol简介PyMOL适用于创作高品质的小分子或是生物大分子（特别是蛋白质）的三维结构图像。软件的作者宣称，在所有正式发表的科学文献中的蛋白质结构图像中，有四分之一是使用PyMOL来制作。PyMOL是少数可以用在结构生物学领域的开放源代码视觉化工具。软件以Py+MOL命名：“Py”表示它是由一种计算机语言Python所衍生出来的，“MOL”表示它是用于显示分子（英文为molecule）结构的">
+<meta property="og:image" content="http://img.blog.csdn.net/20170617181901579">
+<meta property="og:image" content="http://img.blog.csdn.net/20170617202310085">
+<meta property="og:image" content="http://img.blog.csdn.net/20170617202356206">
+<meta property="og:image" content="http://img.blog.csdn.net/20170617202449128">
+<meta property="og:image" content="http://img.blog.csdn.net/20170617202512363">
+<meta property="og:image" content="http://img.blog.csdn.net/20170617202623776">
+<meta property="og:image" content="http://img.blog.csdn.net/20170617202633198">
+<meta property="og:updated_time" content="2017-10-28T16:35:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux（CentOS7_64位）系统下安装Pymol（1.8.6）">
+<meta name="twitter:description" content="一、Pymol简介PyMOL适用于创作高品质的小分子或是生物大分子（特别是蛋白质）的三维结构图像。软件的作者宣称，在所有正式发表的科学文献中的蛋白质结构图像中，有四分之一是使用PyMOL来制作。PyMOL是少数可以用在结构生物学领域的开放源代码视觉化工具。软件以Py+MOL命名：“Py”表示它是由一种计算机语言Python所衍生出来的，“MOL”表示它是用于显示分子（英文为molecule）结构的">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170617181901579">
+  
+    <link rel="alternate" href="/atom.xml" title="Drug Design &amp; Drug Discovery" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/Resource">资源</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Drug Design &amp; Drug Discovery</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Pymol-Linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/24/Pymol-Linux/" class="article-date">
+  <time datetime="2017-10-23T19:15:00.000Z" itemprop="datePublished">2017-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Pymol/">Pymol</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux（CentOS7_64位）系统下安装Pymol（1.8.6）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="一、Pymol简介"><a href="#一、Pymol简介" class="headerlink" title="一、Pymol简介"></a><strong>一、Pymol简介</strong></h1><p>PyMOL适用于创作高品质的小分子或是生物大分子（特别是蛋白质）的三维结构图像。<br>软件的作者宣称，在所有正式发表的科学文献中的蛋白质结构图像中，有四分之一是使用PyMOL来制作。<br>PyMOL是少数可以用在结构生物学领域的开放源代码视觉化工具。软件以Py+MOL命名：“Py”表示它是由<br>一种计算机语言Python所衍生出来的，“MOL”表示它是用于显示分子（英文为molecule）结构的软件。</p>
+<p>PyMOL的学习网站：<a href="http://www.pymolwiki.org/index.php/Main_Page" target="_blank" rel="external">http://www.pymolwiki.org/index.php/Main_Page</a></p>
+<h1 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a><strong>硬件环境</strong></h1><p><img src="http://img.blog.csdn.net/20170617181901579" alt="硬件环境"></p>
+<a id="more"></a>
+<h2 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a><strong>安装依赖包</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum install subversion gcc gcc-c++ kernel-devel python-devel tkinter python-pmw glew-devel </div><div class="line">freeglut-devel libpng-devel freetype-devel libxml2-devel</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">安装过程遇到错误，发现是缺少下面的依赖 </div><div class="line">yum install msgpack-devel</div><div class="line">yum install msgpack</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170617202310085" alt="安装依赖"></p>
+<p><strong>获取安装包</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /download  </div><div class="line">svn co svn://svn.code.sf.net/p/pymol/code/trunk/pymol  </div><div class="line">cd pymol</div></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20170617202356206" alt="git pymol"></p>
+<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a><strong>编译安装</strong></h2><p>建立一个脚本文件，把下面的代码放进去，把脚本文件放入pymol文件夹，运行该脚本。<br>(注意基于python2.7)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash -e  </div><div class="line">  </div><div class="line">prefix=/opt/pymol-svn  </div><div class="line">modules=$prefix/modules  </div><div class="line">  </div><div class="line"># If you want to install as root, then split this line up in &quot;build&quot;  </div><div class="line"># and &quot;install&quot; and run the &quot;install&quot; with &quot;sudo&quot;  </div><div class="line">python2.7 setup.py build install \  </div><div class="line">    --home=$prefix \  </div><div class="line">    --install-lib=$modules \  </div><div class="line">    --install-scripts=$prefix</div></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20170617202449128" alt="biomols.sh"></p>
+<p>进入  opt/pymol-svn/pymol文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/opt/pymol-svn/pymol</div></pre></td></tr></table></figure></p>
+<p>运行下面的命令，创建连接，命令端输入pymol运行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ln -s /opt/pymol-svn/pymol /usr/bin/pymol</div></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20170617202512363" alt="ln -s pymol"></p>
+<h2 id="运行Pymol-1-8-6"><a href="#运行Pymol-1-8-6" class="headerlink" title="运行Pymol 1.8.6"></a><strong>运行Pymol 1.8.6</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pymol</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170617202623776" alt="Pymol"><br><img src="http://img.blog.csdn.net/20170617202633198" alt="Pymol"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/24/Pymol-Linux/" data-id="cja763trc000kygld3531kxzq" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pymol/">Pymol</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/24/gmx-para/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          GROMACS运行参数整理（一）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/21/Xmgrace-Linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Linux（CentOS 7_x64位）系统下安装Xmgrace</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+       
+      
+           <div id="uyan_frame"></div>
+    
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、Pymol简介"><span class="toc-number">1.</span> <span class="toc-text">一、Pymol简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#硬件环境"><span class="toc-number">2.</span> <span class="toc-text">硬件环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装依赖包"><span class="toc-number">2.1.</span> <span class="toc-text">安装依赖包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-number">2.2.</span> <span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行Pymol-1-8-6"><span class="toc-number">2.3.</span> <span class="toc-text">运行Pymol 1.8.6</span></a></li></ol></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 AspirinCode&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2648008726@qq.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/Resource" class="mobile-nav-link">资源</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+
+
+
+
+ <script  type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>RDKit：计算不同分子或构象之间的RMSD | Drug Design &amp; Drug Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、RDKit简介RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。RDKit官网http://www.rdkit.org/RDKit的编译安装及Python（2.7）绑定见博文：http://www.aspirincode.com/2017/11/01/Linux-RDkit-%20install-update/RMSD计算参考网站：http://www.rd">
+<meta name="keywords" content="Linux,RDKit,Python2,RMSD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RDKit：计算不同分子或构象之间的RMSD">
+<meta property="og:url" content="http://yoursite.com/2017/11/20/RDkit-python2-rmsd/index.html">
+<meta property="og:site_name" content="Drug Design &amp; Drug Discovery">
+<meta property="og:description" content="一、RDKit简介RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。RDKit官网http://www.rdkit.org/RDKit的编译安装及Python（2.7）绑定见博文：http://www.aspirincode.com/2017/11/01/Linux-RDkit-%20install-update/RMSD计算参考网站：http://www.rd">
+<meta property="og:image" content="http://yoursite.com/images/rdkit/rdkit.jpg">
+<meta property="og:image" content="http://img.blog.csdn.net/20171120025607768">
+<meta property="og:image" content="http://img.blog.csdn.net/20171120025622339">
+<meta property="og:updated_time" content="2017-11-19T19:40:44.413Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RDKit：计算不同分子或构象之间的RMSD">
+<meta name="twitter:description" content="一、RDKit简介RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。RDKit官网http://www.rdkit.org/RDKit的编译安装及Python（2.7）绑定见博文：http://www.aspirincode.com/2017/11/01/Linux-RDkit-%20install-update/RMSD计算参考网站：http://www.rd">
+<meta name="twitter:image" content="http://yoursite.com/images/rdkit/rdkit.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Drug Design &amp; Drug Discovery" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/Resource">资源</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Drug Design &amp; Drug Discovery</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-RDkit-python2-rmsd" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/20/RDkit-python2-rmsd/" class="article-date">
+  <time datetime="2017-11-19T21:20:00.000Z" itemprop="datePublished">2017-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RDKit/">RDKit</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      RDKit：计算不同分子或构象之间的RMSD
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="一、RDKit简介"><a href="#一、RDKit简介" class="headerlink" title="一、RDKit简介"></a><strong>一、RDKit简介</strong></h2><p>RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。<br>RDKit官网<a href="http://www.rdkit.org/" target="_blank" rel="external">http://www.rdkit.org/</a><br>RDKit的编译安装及Python（2.7）绑定见博文：<a href="http://www.aspirincode.com/2017/11/01/Linux-RDkit-%20install-update/" target="_blank" rel="external">http://www.aspirincode.com/2017/11/01/Linux-RDkit-%20install-update/</a><br>RMSD计算参考网站：<a href="http://www.rdkit.org/docs/Cookbook.html#rmsd-calculation-between-n-molecules" target="_blank" rel="external">http://www.rdkit.org/docs/Cookbook.html#rmsd-calculation-between-n-molecules</a></p>
+<h2 id="二、RMSD-RDKit"><a href="#二、RMSD-RDKit" class="headerlink" title="二、RMSD-RDKit"></a><strong>二、RMSD-RDKit</strong></h2><p>RMSD，Root Mean Square Deviation；给定一个分子结构的两种或者多种状态，<br>对结构中所有的粒子的偏移量求平方和再平均，开方，就是RMSD。</p>
+<p>对于docking而言，如果有reference ligand（结合配体），计算对接配体的构象与结合配体之间的RMSD值，<br>对于判断docking准确性很重要。下面提供一个RDKit计算不同构象之间RMSD值的Python脚本。</p>
+<p><img src="/images/rdkit/rdkit.jpg" alt="RDKit-cd"><br><a id="more"></a></p>
+<h2 id="三、运行环境"><a href="#三、运行环境" class="headerlink" title="三、运行环境"></a><strong>三、运行环境</strong></h2><p>CentOS 7_x64位<br>RDKit+Python2.7</p>
+<h2 id="四、RDKit计算RMSD的Python脚本使用方法"><a href="#四、RDKit计算RMSD的Python脚本使用方法" class="headerlink" title="四、RDKit计算RMSD的Python脚本使用方法"></a><strong>四、RDKit计算RMSD的Python脚本使用方法</strong></h2><p><img src="http://img.blog.csdn.net/20171120025607768" alt="RDKit-RMSD"><br><img src="http://img.blog.csdn.net/20171120025622339" alt="MOLS-sdf"><br><strong>注：输入文件必须为sdf格式</strong></p>
+<h2 id="五、RDKit计算RMSD的Python脚本"><a href="#五、RDKit计算RMSD的Python脚本" class="headerlink" title="五、RDKit计算RMSD的Python脚本"></a><strong>五、RDKit计算RMSD的Python脚本</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python  </div><div class="line">&apos;&apos;&apos;&apos;&apos; </div><div class="line">calculates RMSD differences between all structures in a file </div><div class="line"> </div><div class="line">@author: JP &lt;jp@javaclass.co.uk&gt; </div><div class="line">&apos;&apos;&apos;  </div><div class="line">import os  </div><div class="line">import getopt  </div><div class="line">import sys  </div><div class="line">  </div><div class="line"># rdkit imports  </div><div class="line">from rdkit import Chem  </div><div class="line">from rdkit.Chem import AllChem  </div><div class="line">  </div><div class="line">&apos;&apos;&apos;&apos;&apos; </div><div class="line">Write contents of a string to file </div><div class="line">&apos;&apos;&apos;  </div><div class="line">def write_contents(filename, contents):  </div><div class="line">  # do some basic checking, could use assert strictly speaking  </div><div class="line">  assert filename is not None, &quot;filename cannot be None&quot;  </div><div class="line">  assert contents is not None, &quot;contents cannot be None&quot;  </div><div class="line">  f = open(filename, &quot;w&quot;)  </div><div class="line">  f.write(contents)  </div><div class="line">  f.close() # close the file  </div><div class="line">  </div><div class="line">&apos;&apos;&apos;&apos;&apos; </div><div class="line">Write a list to a file </div><div class="line">&apos;&apos;&apos;  </div><div class="line">def write_list_to_file(filename, list, line_sep = os.linesep):  </div><div class="line">  # do some basic checking, could use assert strictly speaking  </div><div class="line">  assert list is not None and len(list) &gt; 0, &quot;list cannot be None or empty&quot;  </div><div class="line">  write_contents(filename, line_sep.join(list))  </div><div class="line">  </div><div class="line">&apos;&apos;&apos;&apos;&apos; </div><div class="line">Calculate RMSD spread </div><div class="line">&apos;&apos;&apos;  </div><div class="line">def calculate_spread(molecules_file):  </div><div class="line">  </div><div class="line">  assert os.path.isfile(molecules_file), &quot;File %s does not exist!&quot; % molecules  </div><div class="line">  </div><div class="line">  # get an iterator  </div><div class="line">  mols = Chem.SDMolSupplier(molecules_file)  </div><div class="line">  </div><div class="line">  spread_values = []  </div><div class="line">  # how many molecules do we have in our file  </div><div class="line">  mol_count = len(mols)  </div><div class="line">  # we are going to compare each molecule with every other molecule  </div><div class="line">  # typical n choose k scenario (n choose 2)  </div><div class="line">  # where number of combinations is given by (n!) / k!(n-k)! ; if my maths isn&apos;t too rusty  </div><div class="line">  for i in range(mol_count - 1):  </div><div class="line">      for j in range(i+1, mol_count):  </div><div class="line">          # show something is being done ... because for large mol_count this will take some time  </div><div class="line">          print(&quot;Aligning molecule #%d with molecule #%d (%d molecules in all)&quot; % (i, j, mol_count))  </div><div class="line">          # calculate RMSD and store in an array  </div><div class="line">          # unlike AlignMol this takes care of symmetry  </div><div class="line">          spread_values.append(str(AllChem.GetBestRMS(mols[i], mols[j])))  </div><div class="line">  # return that array  </div><div class="line">  return spread_values  </div><div class="line">  </div><div class="line">  </div><div class="line">def main():  </div><div class="line">  try:  </div><div class="line">      # the options are as follows:  </div><div class="line">      # f - the actual structure file  </div><div class="line">      opts, args = getopt.getopt(sys.argv[1:], &quot;vf:o:&quot;)  </div><div class="line">  except getopt.GetoptError, err:  </div><div class="line">      # print help information and exit:  </div><div class="line">      print(str(err)) # will print something like &quot;option -a not recognized&quot;  </div><div class="line">      sys.exit(401)  </div><div class="line">  </div><div class="line">  # DEFAULTS  </div><div class="line">  molecules_file  = None  </div><div class="line">  output_file = None  </div><div class="line">  </div><div class="line">  for opt, arg in opts:  </div><div class="line">      if opt == &quot;-v&quot;:  </div><div class="line">          print(&quot;RMSD Spread 1.1&quot;)  </div><div class="line">          sys.exit()  </div><div class="line">      elif opt == &quot;-f&quot;:  </div><div class="line">          molecules_file = arg  </div><div class="line">      elif opt == &quot;-o&quot;:  </div><div class="line">          output_file = arg  </div><div class="line">      else:  </div><div class="line">          assert False, &quot;Unhandled option: &quot; + opt  </div><div class="line">  </div><div class="line">  # assert the following - not the cleanest way to do this but this will work  </div><div class="line">  assert molecules_file is not None, &quot;file containing molecules must be specified, add -f to command line arguments&quot;  </div><div class="line">  assert output_file is not None, &quot;output file must be specified, add -o to command line arguments&quot;  </div><div class="line">  # get the RMSD spread values  </div><div class="line">  spread_values = calculate_spread(molecules_file)  </div><div class="line">  # write them to file  </div><div class="line">  write_list_to_file(output_file, spread_values)  </div><div class="line">  </div><div class="line">  </div><div class="line">  </div><div class="line">if __name__ == &quot;__main__&quot;:  </div><div class="line">  main()</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/20/RDkit-python2-rmsd/" data-id="cja763trr000zygldadyzybwq" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python2/">Python2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDKit/">RDKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RMSD/">RMSD</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/19/RDkit-python2-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">RDKit toolkit实战三:Generating Similarity Maps Using Fingerprints</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+       
+      
+           <div id="uyan_frame"></div>
+    
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、RDKit简介"><span class="toc-number">1.</span> <span class="toc-text">一、RDKit简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、RMSD-RDKit"><span class="toc-number">2.</span> <span class="toc-text">二、RMSD-RDKit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、运行环境"><span class="toc-number">3.</span> <span class="toc-text">三、运行环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、RDKit计算RMSD的Python脚本使用方法"><span class="toc-number">4.</span> <span class="toc-text">四、RDKit计算RMSD的Python脚本使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、RDKit计算RMSD的Python脚本"><span class="toc-number">5.</span> <span class="toc-text">五、RDKit计算RMSD的Python脚本</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 AspirinCode&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2648008726@qq.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/Resource" class="mobile-nav-link">资源</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+
+
+
+
+ <script  type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>

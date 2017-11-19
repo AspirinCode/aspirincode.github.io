@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Linux（CentOS 7_x64位）系统下安装Xmgrace | Drug Design &amp; Drug Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、Xmgrace简介Xmgrace是Linux下类似origin的免费开源画图软件。对于用惯Linux的人, 在Linux下画图方便许多，尤其处理gromacs动力学数据绘图。Xmgrace官网: http://plasma-gate.weizmann.ac.il/Grace/Xmgrace安装包下载：ftp://plasma-gate.weizmann.ac.il/pub/grace/src/">
+<meta name="keywords" content="Linux,Xmgrace">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux（CentOS 7_x64位）系统下安装Xmgrace">
+<meta property="og:url" content="http://yoursite.com/2017/10/21/Xmgrace-Linux/index.html">
+<meta property="og:site_name" content="Drug Design &amp; Drug Discovery">
+<meta property="og:description" content="一、Xmgrace简介Xmgrace是Linux下类似origin的免费开源画图软件。对于用惯Linux的人, 在Linux下画图方便许多，尤其处理gromacs动力学数据绘图。Xmgrace官网: http://plasma-gate.weizmann.ac.il/Grace/Xmgrace安装包下载：ftp://plasma-gate.weizmann.ac.il/pub/grace/src/">
+<meta property="og:image" content="http://img.blog.csdn.net/20171021174925811">
+<meta property="og:image" content="http://img.blog.csdn.net/20171021173028395">
+<meta property="og:image" content="http://img.blog.csdn.net/20171021173046397">
+<meta property="og:updated_time" content="2017-10-28T16:36:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux（CentOS 7_x64位）系统下安装Xmgrace">
+<meta name="twitter:description" content="一、Xmgrace简介Xmgrace是Linux下类似origin的免费开源画图软件。对于用惯Linux的人, 在Linux下画图方便许多，尤其处理gromacs动力学数据绘图。Xmgrace官网: http://plasma-gate.weizmann.ac.il/Grace/Xmgrace安装包下载：ftp://plasma-gate.weizmann.ac.il/pub/grace/src/">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20171021174925811">
+  
+    <link rel="alternate" href="/atom.xml" title="Drug Design &amp; Drug Discovery" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/Resource">资源</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Drug Design &amp; Drug Discovery</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Xmgrace-Linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/21/Xmgrace-Linux/" class="article-date">
+  <time datetime="2017-10-21T10:00:00.000Z" itemprop="datePublished">2017-10-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Xmgrace/">Xmgrace</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux（CentOS 7_x64位）系统下安装Xmgrace
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="一、Xmgrace简介"><a href="#一、Xmgrace简介" class="headerlink" title="一、Xmgrace简介"></a><strong>一、Xmgrace简介</strong></h1><p>Xmgrace是Linux下类似origin的免费开源画图软件。<br>对于用惯Linux的人, 在Linux下画图方便许多，尤其处理gromacs动力学数据绘图。<br>Xmgrace官网: <a href="http://plasma-gate.weizmann.ac.il/Grace/" target="_blank" rel="external">http://plasma-gate.weizmann.ac.il/Grace/</a><br>Xmgrace安装包下载：ftp://plasma-gate.weizmann.ac.il/pub/grace/src/grace5/<br><img src="http://img.blog.csdn.net/20171021174925811" alt="grace"><br><a id="more"></a></p>
+<h1 id="CentOS-7（64位）下安装Xmgrace"><a href="#CentOS-7（64位）下安装Xmgrace" class="headerlink" title="CentOS 7（64位）下安装Xmgrace"></a><strong>CentOS 7（64位）下安装Xmgrace</strong></h1><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">yum install openmotif</div><div class="line">yum install openmotif-devel</div><div class="line">yum install libXpm-devel</div><div class="line">yum install libXp-devel</div><div class="line">yum install xorg-x11-xbitmaps</div></pre></td></tr></table></figure>
+<h2 id="编译安装Xmgrace"><a href="#编译安装Xmgrace" class="headerlink" title="编译安装Xmgrace"></a><strong>编译安装Xmgrace</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">tar zxvf grace-5.1.25.tar.gz</div><div class="line">cd grace-5.1.25</div><div class="line">./configure </div><div class="line">make </div><div class="line">make install </div><div class="line">make links</div></pre></td></tr></table></figure>
+<h2 id="运行Xmgrace"><a href="#运行Xmgrace" class="headerlink" title="运行Xmgrace"></a>运行Xmgrace</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xmgrace</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20171021173028395" alt="xmgrace"><br><img src="http://img.blog.csdn.net/20171021173046397" alt="xmgrace rmsd.xvg"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/21/Xmgrace-Linux/" data-id="cja763trx0013ygld5wal718y" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xmgrace/">Xmgrace</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/24/Pymol-Linux/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Linux（CentOS7_64位）系统下安装Pymol（1.8.6）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/19/Linux-acpype/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Linux（CentOS 7_x64）系统下安装ACPYPE</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+       
+      
+           <div id="uyan_frame"></div>
+    
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、Xmgrace简介"><span class="toc-number">1.</span> <span class="toc-text">一、Xmgrace简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CentOS-7（64位）下安装Xmgrace"><span class="toc-number">2.</span> <span class="toc-text">CentOS 7（64位）下安装Xmgrace</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.1.</span> <span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装Xmgrace"><span class="toc-number">2.2.</span> <span class="toc-text">编译安装Xmgrace</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行Xmgrace"><span class="toc-number">2.3.</span> <span class="toc-text">运行Xmgrace</span></a></li></ol></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 AspirinCode&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2648008726@qq.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/Resource" class="mobile-nav-link">资源</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+
+
+
+
+ <script  type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>

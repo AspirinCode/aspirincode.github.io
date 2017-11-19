@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>RDKit toolkit实战一：调用Python API | Drug Design &amp; Drug Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、RDKit简介RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。RDKit官网http://www.rdkit.org/RDKit的编译安装及Python（2.7）绑定见博文： http://blog.csdn.net/u012325865/article/details/78046781RDKit iPython Notebook参考网站：https://">
+<meta name="keywords" content="Linux,Python,RDKit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RDKit toolkit实战一：调用Python API">
+<meta property="og:url" content="http://yoursite.com/2017/10/17/RDkit-python1/index.html">
+<meta property="og:site_name" content="Drug Design &amp; Drug Discovery">
+<meta property="og:description" content="一、RDKit简介RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。RDKit官网http://www.rdkit.org/RDKit的编译安装及Python（2.7）绑定见博文： http://blog.csdn.net/u012325865/article/details/78046781RDKit iPython Notebook参考网站：https://">
+<meta property="og:image" content="http://yoursite.com/images/rdkit/rdkit.jpg">
+<meta property="og:image" content="http://img.blog.csdn.net/20171017222443725">
+<meta property="og:updated_time" content="2017-10-24T17:46:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RDKit toolkit实战一：调用Python API">
+<meta name="twitter:description" content="一、RDKit简介RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。RDKit官网http://www.rdkit.org/RDKit的编译安装及Python（2.7）绑定见博文： http://blog.csdn.net/u012325865/article/details/78046781RDKit iPython Notebook参考网站：https://">
+<meta name="twitter:image" content="http://yoursite.com/images/rdkit/rdkit.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Drug Design &amp; Drug Discovery" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/Resource">资源</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Drug Design &amp; Drug Discovery</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-RDkit-python1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/17/RDkit-python1/" class="article-date">
+  <time datetime="2017-10-17T14:55:30.000Z" itemprop="datePublished">2017-10-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RDKit/">RDKit</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      RDKit toolkit实战一：调用Python API
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p><strong>一、RDKit简介</strong><br>RDKit是一款开源化学信息学与机器学习工具包，提供C++和Python的API接口。<br>RDKit官网<a href="http://www.rdkit.org/" target="_blank" rel="external">http://www.rdkit.org/</a><br>RDKit的编译安装及Python（2.7）绑定见博文： <a href="http://blog.csdn.net/u012325865/article/details/78046781" target="_blank" rel="external">http://blog.csdn.net/u012325865/article/details/78046781</a><br>RDKit iPython Notebook参考网站：<a href="https://nbviewer.jupyter.org/gist/madgpap/7673276" target="_blank" rel="external">https://nbviewer.jupyter.org/gist/madgpap/7673276</a><br><img src="/images/rdkit/rdkit.jpg" alt="RDKit"><br><a id="more"></a></p>
+<p><strong>运行参考网站Python代码体验一下</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">from rdkit.Chem import AllChem as Chem</div><div class="line">from rdkit.Chem.Draw import IPythonConsole</div><div class="line">from rdkit.Chem import Descriptors</div><div class="line">from rdkit import DataStructs</div><div class="line"></div><div class="line">smi = &apos;CCCc1nn(C)c2C(=O)NC(=Nc12)c3cc(ccc3OCC)S(=O)(=O)N4CCN(C)CC4&apos; #sildenafil</div><div class="line">m = Chem.MolFromSmiles(smi)</div><div class="line">m</div><div class="line"></div><div class="line">smi2 = &apos;CCCc1nc(C)c2C(=O)N=C(Nn12)c3cc(ccc3OCC)S(=O)(=O)N4CCN(CC)CC4&apos; #vardenafil</div><div class="line">m2 = Chem.MolFromSmiles(smi2)</div><div class="line">fp2 = Chem.GetMorganFingerprintAsBitVect(m2, 2, nBits=2048)</div><div class="line">m2</div></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20171017222443725" alt="RDKit-test"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/17/RDkit-python1/" data-id="cja763trh000qygldf9bmi8ts" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDKit/">RDKit</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/18/CentOS-CUDA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          CentOS7（64位）安装NVIDIA显卡驱动和CUDA8.0
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/15/Linux-Amber16-ambertools16/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Linux（CentOS 7_x64位）下Amber16和AmberTools16的安装</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+       
+      
+           <div id="uyan_frame"></div>
+    
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/20/RDkit-python2-rmsd/">RDKit：计算不同分子或构象之间的RMSD</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/19/RDkit-python2-3/">RDKit toolkit实战三:Generating Similarity Maps Using Fingerprints</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/01/RDkit-python2-2/">RDKit toolkit实战二:Generating Similarity Maps Using Fingerprints</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/01/Linux-RDkit- install-update/">Linux（CentOS 7_x64位）系统下安装RDkit(修正)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/29/Virtual Screening/">虚拟筛选涉及的小分子数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 AspirinCode&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2648008726@qq.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/Resource" class="mobile-nav-link">资源</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+
+
+
+
+ <script  type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>

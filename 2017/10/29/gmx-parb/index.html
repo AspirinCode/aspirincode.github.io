@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>GROMACS运行参数整理（二） | Drug Design &amp; Drug Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="GROMACS运行参数整理（一）http://www.aspirincode.com/2017/10/24/gmx-para/http://blog.csdn.net/u012325865/article/details/78324899 GROMACS运行参数整理（二）Gromacs运行参数中文注释中文注释仅供参考12345678910119.Temperature couplingtcoupl">
+<meta name="keywords" content="Linux,GROMACS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GROMACS运行参数整理（二）">
+<meta property="og:url" content="http://yoursite.com/2017/10/29/gmx-parb/index.html">
+<meta property="og:site_name" content="Drug Design &amp; Drug Discovery">
+<meta property="og:description" content="GROMACS运行参数整理（一）http://www.aspirincode.com/2017/10/24/gmx-para/http://blog.csdn.net/u012325865/article/details/78324899 GROMACS运行参数整理（二）Gromacs运行参数中文注释中文注释仅供参考12345678910119.Temperature couplingtcoupl">
+<meta property="og:updated_time" content="2017-10-29T06:40:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GROMACS运行参数整理（二）">
+<meta name="twitter:description" content="GROMACS运行参数整理（一）http://www.aspirincode.com/2017/10/24/gmx-para/http://blog.csdn.net/u012325865/article/details/78324899 GROMACS运行参数整理（二）Gromacs运行参数中文注释中文注释仅供参考12345678910119.Temperature couplingtcoupl">
+  
+    <link rel="alternate" href="/atom.xml" title="Drug Design &amp; Drug Discovery" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/Resource">资源</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Drug Design &amp; Drug Discovery</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-gmx-parb" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/29/gmx-parb/" class="article-date">
+  <time datetime="2017-10-29T15:30:00.000Z" itemprop="datePublished">2017-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/GROMACS/">GROMACS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      GROMACS运行参数整理（二）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="GROMACS运行参数整理（一）"><a href="#GROMACS运行参数整理（一）" class="headerlink" title="GROMACS运行参数整理（一）"></a>GROMACS运行参数整理（一）</h2><p><a href="http://www.aspirincode.com/2017/10/24/gmx-para/" target="_blank" rel="external">http://www.aspirincode.com/2017/10/24/gmx-para/</a><br><a href="http://blog.csdn.net/u012325865/article/details/78324899" target="_blank" rel="external">http://blog.csdn.net/u012325865/article/details/78324899</a></p>
+<h2 id="GROMACS运行参数整理（二）"><a href="#GROMACS运行参数整理（二）" class="headerlink" title="GROMACS运行参数整理（二）"></a>GROMACS运行参数整理（二）</h2><h3 id="Gromacs运行参数中文注释"><a href="#Gromacs运行参数中文注释" class="headerlink" title="Gromacs运行参数中文注释"></a><strong>Gromacs运行参数中文注释</strong></h3><p>中文注释仅供参考<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">9.Temperature coupling</div><div class="line"></div><div class="line">tcoupl =  ; 指定耦合方法</div><div class="line">         no ;不使用</div><div class="line">		 berendsen</div><div class="line">		 nose-hoover</div><div class="line">		 v-rescale</div><div class="line">nsttcouple =  ; 热耦合频率，默认1，表示与nstlist一致</div><div class="line">tc_grps =  ; 热耦合组</div><div class="line">tau_t =  ; 热耦合时间常数， ps, -1, 表示不耦合，个数对应组</div><div class="line">ref_t =  ; 参考温度---恒温值，个数对应组</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">10.Pressure coupling</div><div class="line"></div><div class="line">pcoupl =  ; 指定压力耦合方式</div><div class="line">         no ; 不耦合，即固定盒子大小</div><div class="line">         berendsen</div><div class="line">         Parrinello-Rahman</div><div class="line">		 </div><div class="line">pcoupltype =  ;</div><div class="line">             isotropic ; 盒子各向同性</div><div class="line">			 semiisotropic ; x/y 方向同性，z方向不同形；一般用于膜模拟</div><div class="line">			 anisotropic ; 各向异性</div><div class="line">			 surface-tension ;xy平面张力耦合</div><div class="line">nstpcouple =   ; 压力耦合频率，默认-1，表示与nstlist一致，速度积分是设为1</div><div class="line">tau_p =  ; 压力耦合时间常数</div><div class="line">compressibility =  ; 水可压缩性，默认1ps</div><div class="line">ref_p =  ; 参考压力--恒压值，一般为1 bar</div><div class="line">refcoord_scaling =  ;</div><div class="line">                   no ; 坐标限制不被修改，默认值</div><div class="line">				   all</div><div class="line">				   com</div><div class="line">11.Simulated annealing</div><div class="line"></div><div class="line">annealing =  ; 指定每个温度组别的退火算法</div><div class="line">            no ;不进行模拟退火，仅耦合参考温度值</div><div class="line">			single ; 单序模拟退火，若模拟时间长于升温后的最后时间，则之后是耦合温度</div><div class="line">			periodic ; 从最初的温度开始，到最后温度，在整个模拟时间里反复进行</div><div class="line"></div><div class="line">annealing_npoints =  ; 退火参考/控制点数，与温度组别值相等，0表示不使用退火</div><div class="line">annealing_time =  ; 每个温度组别退火时间，若使用周期性退火，则在最后一个值再开始退火，ps,个数与annealing_npoints的值一致</div><div class="line">annealing_temp =  ; 退火温度组别，个数与个数与annealing_npoints的值一致</div><div class="line"></div><div class="line">12.Velocity generation</div><div class="line"></div><div class="line">gen_vel =  ;速度生成</div><div class="line">          no ; 不生成速度。输入文件没有速度，则为0</div><div class="line">		  yes ; 根据麦克斯韦速度分布函数生成速度，只对md有意义</div><div class="line">		  </div><div class="line">gen_temp =  ; 体系温度，用于麦克斯韦速度分布</div><div class="line"></div><div class="line">gen_seed =  ; 初始速度初试随机数，-1表示为进程的ID数</div><div class="line"></div><div class="line">13.Bonds</div><div class="line"></div><div class="line">constraints =  ; 键约束</div><div class="line">              none ; 没有约束，除特意指明外</div><div class="line">			  hbonds ; 氢键约束</div><div class="line">			  all-bonds ; 所有键约束</div><div class="line">			  h-angles ; 所有氢键键长和键角约束</div><div class="line">			  all-angles ;所有键长和键角约束</div><div class="line">constraint-algorithm =  ; 约束算法</div><div class="line">                       LINCS ; 不能用于角度约束</div><div class="line">					   SHAKE ; 比LINCS慢且不稳定；不能用于能量最小化</div><div class="line">					   </div><div class="line">continuation =  ;</div><div class="line">               no ; 初试构象应用约束，并复位，第一次MD</div><div class="line">			   yes ; 初试构象不约束，不复位，用于精确的继续计算或重计算</div><div class="line"></div><div class="line">shake_tol =  ; 默认0.0001，SHAKE相对容忍度</div><div class="line">lincs_order =  ;约束偶合矩阵阶次，用于LINS精度，默认4</div><div class="line">lincs_iter =  ; 迭代次数，用于LINCS约束精度，默认1</div><div class="line">lincs_warnangle =  ; 键最大旋转角度，默认为30</div><div class="line"></div><div class="line">morse =  ;</div><div class="line">        no ; 键为谐波势能</div><div class="line">		yes ;键为Morse势能</div><div class="line"></div><div class="line">14.Energy group exclusions</div><div class="line"></div><div class="line">energygrp_excl =  ;排除一对组之间的非键相互作用，在能量计算等方面应用</div><div class="line"></div><div class="line">15. COM pulling</div><div class="line"></div><div class="line">pull =  ;</div><div class="line">       no ; </div><div class="line">	   umberlla ;</div><div class="line">	   constraint-al;</div><div class="line">	  </div><div class="line">16.Free energy calculations</div><div class="line"></div><div class="line">free_energy =  ; </div><div class="line">              no ; 仅适用拓扑A</div><div class="line">			  yes ; lambda 插值</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/29/gmx-parb/" data-id="cja763tsk001tygld18n0w3jv" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GROMACS/">GROMACS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/29/Virtual Screening/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          虚拟筛选涉及的小分子数据库
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/24/gmx-para/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">GROMACS运行参数整理（一）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+       
+      
+           <div id="uyan_frame"></div>
+    
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GROMACS运行参数整理（一）"><span class="toc-number">1.</span> <span class="toc-text">GROMACS运行参数整理（一）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GROMACS运行参数整理（二）"><span class="toc-number">2.</span> <span class="toc-text">GROMACS运行参数整理（二）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Gromacs运行参数中文注释"><span class="toc-number">2.1.</span> <span class="toc-text">Gromacs运行参数中文注释</span></a></li></ol></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 AspirinCode&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2648008726@qq.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/Resource" class="mobile-nav-link">资源</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+
+
+
+
+ <script  type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>

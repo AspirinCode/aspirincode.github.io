@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>GROMACS运行参数整理（一） | Drug Design &amp; Drug Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Gromacs运行参数中文注释中文注释仅供参考1234567891011121314151617181920212223242526272829301.Preprocessinginclude = ... ; 指定拓扑结构目录define = ...  ; 预处理控制拓扑文件         -DPOSRES ; 位置限制		 -DFLEXIBLE ; 柔性水代替刚性水		 2.Run contr">
+<meta name="keywords" content="Linux,GROMACS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GROMACS运行参数整理（一）">
+<meta property="og:url" content="http://yoursite.com/2017/10/24/gmx-para/index.html">
+<meta property="og:site_name" content="Drug Design &amp; Drug Discovery">
+<meta property="og:description" content="Gromacs运行参数中文注释中文注释仅供参考1234567891011121314151617181920212223242526272829301.Preprocessinginclude = ... ; 指定拓扑结构目录define = ...  ; 预处理控制拓扑文件         -DPOSRES ; 位置限制		 -DFLEXIBLE ; 柔性水代替刚性水		 2.Run contr">
+<meta property="og:updated_time" content="2017-10-28T16:37:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GROMACS运行参数整理（一）">
+<meta name="twitter:description" content="Gromacs运行参数中文注释中文注释仅供参考1234567891011121314151617181920212223242526272829301.Preprocessinginclude = ... ; 指定拓扑结构目录define = ...  ; 预处理控制拓扑文件         -DPOSRES ; 位置限制		 -DFLEXIBLE ; 柔性水代替刚性水		 2.Run contr">
+  
+    <link rel="alternate" href="/atom.xml" title="Drug Design &amp; Drug Discovery" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/Resource">资源</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Drug Design &amp; Drug Discovery</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-gmx-para" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/24/gmx-para/" class="article-date">
+  <time datetime="2017-10-24T04:00:00.000Z" itemprop="datePublished">2017-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/GROMACS/">GROMACS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      GROMACS运行参数整理（一）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="Gromacs运行参数中文注释"><a href="#Gromacs运行参数中文注释" class="headerlink" title="Gromacs运行参数中文注释"></a><strong>Gromacs运行参数中文注释</strong></h2><p>中文注释仅供参考<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">1.Preprocessing</div><div class="line"></div><div class="line">include = ... ; 指定拓扑结构目录</div><div class="line">define = ...  ; 预处理控制拓扑文件</div><div class="line"></div><div class="line">         -DPOSRES ; 位置限制</div><div class="line">		 -DFLEXIBLE ; 柔性水代替刚性水</div><div class="line">		 </div><div class="line">2.Run control</div><div class="line">integrator =   ; 指定积分算法</div><div class="line">             md ; 蛙跳牛顿积分算法，用于平衡动力学积分</div><div class="line">			 steep ; 最陡下降法，用于能量最小化</div><div class="line">			 cg ; 共轭梯度法;用于能量最小化（需要双精度，且需先做steep）</div><div class="line"></div><div class="line">tinit = ; 模拟开始时刻（仅用于md,sd,bd)</div><div class="line"></div><div class="line">dt = ; 积分步长（仅用于md,sd,bd)</div><div class="line"></div><div class="line">nsteps = ;积分或能量最小化步数（-1为无穷大）</div><div class="line"></div><div class="line">init_step = ; 起始步</div><div class="line"></div><div class="line">comm_mode =   ; 质心运动控制</div><div class="line">            Linear ; 限制质心平移</div><div class="line">			Angular  ; 限制质心平移及绕心运动</div><div class="line">			No ; 无限制</div><div class="line"></div><div class="line">nstcomm =   ; 质心移动频率</div><div class="line"></div><div class="line">com_grps =   ;组质心设定，默认整个体系</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">3. Energy minimization</div><div class="line">emtol = ; 能量最小化收敛值,用于steep</div><div class="line">emstep = ; 初始步长，用于steep</div><div class="line"></div><div class="line">nstcgsteep = ; 共轭梯度法能量最小化步数</div><div class="line"></div><div class="line">4.Output control</div><div class="line">nstxout = ; 坐标保存到轨迹文件的频率</div><div class="line">nstvout = ; 坐速度保存到轨迹文件的频率</div><div class="line">nstfout = ; 力保存到轨迹文件的频率</div><div class="line">nstlog = ; log文件更新频率</div><div class="line">nstcalcenergy = ;能量计算频率</div><div class="line">               0 ； 从不计算</div><div class="line">			   -1 ； 默认，与nstlist更新频率一致</div><div class="line">nstenergy = ; 能量保存到轨迹文件的频率，默认100步，必须是nstcalcenergy的倍数</div><div class="line"></div><div class="line">nstxtcout = ; 坐标保存到xtc轨迹文件的频率,默认100步</div><div class="line">xtc_precision = ; xtc文件精度，默认1000</div><div class="line">xtc_grps = ; 保存到xtc轨迹文件的组，nstxtcout需大于0</div><div class="line">energygrps = ; 保存能量的组</div><div class="line"></div><div class="line">5. Neighbor searching</div><div class="line">nstlist = ; 邻近列表更新频率</div><div class="line">ns_type = ; 邻近列表搜索算法</div><div class="line">         grid ; 网络搜索</div><div class="line">		 simple ; 简单搜索</div><div class="line">pbc = ; 周期性边界条件periodic boundary conditions</div><div class="line">     xyz ; 使用周期性边界条件</div><div class="line">	 no ; 没有使用周期性边界条件</div><div class="line">	 xy ；仅在xy方向使用周期性边界条件</div><div class="line">periodic_molecules = ;  no ：分子是有限的</div><div class="line">                        yes :分子是无限的，使用周期性边界条件</div><div class="line">rlist = ; 短程邻近列表截断</div><div class="line">rlistlong = ; 长程邻近列表截断，需配合双程截断</div><div class="line"></div><div class="line">6.Electrostatics</div><div class="line">coulombtype =  ; PME;库伦计算方式</div><div class="line">rcoulomb =  ; 短程库伦截断</div><div class="line"></div><div class="line">7.VdW</div><div class="line">VdWtype =  ; 范德华力计算方式  </div><div class="line">          Cut-off ;</div><div class="line">rvdw =  ; 短程范德华力截断</div><div class="line">DispCorr =  ; 色散校正</div><div class="line">           no ；不修正</div><div class="line">		   EnerPres ; 使用长程色散校正能量和压力</div><div class="line">		   Ener ；使用长程色散校正能量</div><div class="line"></div><div class="line">8.Ewald</div><div class="line"></div><div class="line">fourierspacing =  ; FFT傅里叶变换格点间距，与PME同事使用</div><div class="line"></div><div class="line">pme_order =  ; PME插值，默认4表示3次插值</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/24/gmx-para/" data-id="cja763tsg001oygldjrcuxoqg" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GROMACS/">GROMACS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/29/gmx-parb/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          GROMACS运行参数整理（二）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/24/Pymol-Linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Linux（CentOS7_64位）系统下安装Pymol（1.8.6）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+       
+      
+           <div id="uyan_frame"></div>
+    
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gromacs运行参数中文注释"><span class="toc-number">1.</span> <span class="toc-text">Gromacs运行参数中文注释</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 AspirinCode&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2648008726@qq.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/Resource" class="mobile-nav-link">资源</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+
+
+
+
+ <script  type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </div>
+</body>
+</html>
